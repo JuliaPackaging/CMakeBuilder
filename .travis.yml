@@ -24,12 +24,12 @@ script:
 deploy:
   provider: releases
   api_key:
-      # Note; this api_key is only valid for stevengj/CMakeBuilder; you need
+      # Note; this api_key is only valid for JuliaPackaging/CMakeBuilder; you need
       # to make your own: https://docs.travis-ci.com/user/deployment/releases/
-    secure: MYqqMvfuhMOXuOYkvn9VdvHMX8jvZA4WKQ3Lyw2aFIm6wTtrxpDUFvINjYuSUZqrQNhDsjJKdhsvJcpyGoXATvY4duUQezu4ejEflB66H2rqVUaqlQ4KYP6OXfmnPSzNeDB+8mqvqBtfVZUg3aoGprKMtHH1Icmo4JiKGjZ739zAk6mE0TKxLN4GeGxrYpeyib1dk7lwWBbkH7IxKgHyDfPAqfqzoNmZgWAFUJMPoDCjOwU+3fXbZ0UiMql6pR8QCR8E2OHyg4ytTGgiuuRWbMsxosvEjNfB3s2fwLjuBJdoX4Pq1YdNDoQBQqmDeULJkgqfFz0Vp4AFAeCuTahrQmeQg8isJPIAROlpGzD2ebkVdZYYJgDA6xuQahcVukfjt3oYUbaHzLzKqLYFXgJB+ztAKbnqZq+TjPs8j/OI/Fe70+a+8qq7fWFpE5bfieq7Lf6CtYYZz8VSgr/dr3qChPRT/ZV+g7mEcCKUY+pF+FPbWtv5QtBJWQ5SAx6GinY1IVUdrBrj92vPfEg5E54vKO+Yac2jpC2uxFG7Vb+2WR0BK6bcb6f1amsv5uPtfe7FSnBAhoeAhR7jvRA9ekR/lnyt+I+6vVUH8vFbxa2L/dlj0hsUKs80mpkFbntq+GSVuDnYBuy9jasDSeqwRbFRIORSDzxsccnCvq0JrGam3kM=
+    secure: H/TrZPbYVvvvluGEDdsZQJo2C3RZ3RvSUPSN7VCOt21YpSc/ToCzT4+3C81kC9inxHYIaMWDm0Jl7Oba/QaJ7VaaDjjIgnrYx9IUMSzHuJBzNl8FFyXdA4/e0H1/Kzr89P4nzVYfoAsaawLJlu7cI9OWX94PHDlq3BKF52/52EYk71GepUDBtYigltgGdlwoUQKD8DJq/HbQnsYmCLaGKVesBXsdkKnrFfxVdcYCqDeIMe7pk/wzUcbr7AVAe7FybRcdQdv/qN2sO3i8Fcvt9rbIRSjioH5nTRoW233tvr0CJGmIW/xRPOPAYa8hhGJg7dXRLnrhUJalx9jRKnAT490/mXAPChk0hmHsmhw5PPiTAXVQ/WNJalN7XVB33JvXWJue6uvag8lapt2xjurpg5oWnw+AYKN+zaROrxtgTWYeLFWk0P8Z6JmN5fc05CAhW6qbnmUOD/jK9LY+XU0beREDTNlJCy3/7xUne7ATQ5iWZawBDZoDCTQfhVbVnpAJnenmA49vwgciTX36xaWyaPIhy4vtxftjOGE0kxmeGkRGz2xuTcg/SAJvvV6cec1ig7JAC5yRt0cbXsbnqfrAvtJmAlfFiVCo3FM4cmriI5cHgLATXNP9E6c2+Tc4sjXgw+N4eXROh9Z4MAns78Y2/cSeZF2fcFeIpwBcNxNboNE=
   file_glob: true
   file: products/*
   skip_cleanup: true
   on:
-    repo: stevengj/CMakeBuilder
+    repo: JuliaPackaging/CMakeBuilder
     tags: true
