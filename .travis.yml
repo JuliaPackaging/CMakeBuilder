@@ -16,11 +16,10 @@ env:
   - BINARYBUILDER_DOWNLOADS_CACHE=downloads
   - BINARYBUILDER_AUTOMATIC_APPLE=true
   matrix:
-    - PART=1/5
-    - PART=2/5
-    - PART=3/5
-    - PART=4/5
-    - PART=5/5
+    - PART=1/4
+    - PART=2/4
+    - PART=3/4
+    - PART=4/4
 sudo: required
 jobs:
   include:
