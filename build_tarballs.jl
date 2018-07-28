@@ -11,9 +11,17 @@ script = raw"""
 cd $WORKSPACE/srcdir/cmake-*
 mkdir build
 cd build
-cmake -DCMAKE_INSTALL_PREFIX=$prefix -DCMAKE_TOOLCHAIN_FILE=/opt/$target/$target.toolchain -DCMAKE_USE_SYSTEM_LIBRARIES=Off -DBUILD_CursesDialog=Off ..
-make
-make install
+if cmake -DCMAKE_INSTALL_PREFIX=$prefix -DCMAKE_TOOLCHAIN_FILE=/opt/$target/$target.toolchain -DCMAKE_USE_SYSTEM_LIBRARIES=Off -DBUILD_CursesDialog=Off ..; then
+    make
+    make install
+else
+    echo "============= CMakeFiles/CMakeOutput.log ==============="
+    cat CMakeFiles/CMakeOutput.log
+    echo "============= CMakeFiles/CMakeError.log ==============="
+    cat CMakeFiles/CMakeError.log
+    exit 1
+fi
+
 """
 
 # These are the platforms we will build for by default, unless further
